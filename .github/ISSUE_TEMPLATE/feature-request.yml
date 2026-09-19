@@ -1,63 +1,24 @@
-name: Feedback or feature request
-description: Suggest an improvement to Monolith or give gameplay feedback.
-title: "[Feedback] "
+name: Feature request
+description: Suggest an improvement or new idea for Monolith.
+title: "[Feature] "
 labels:
   - feature
+
 body:
-  - type: markdown
+  - type: textarea
+    id: idea
     attributes:
-      value: |
-        Suggestions about gameplay, balance, usability, and new features are welcome.
-
-  - type: dropdown
-    id: category
-    attributes:
-      label: What kind of feedback is this?
-      options:
-        - Gameplay or balance
-        - UI / UX
-        - Mobile
-        - New feature
-        - Tutorial / rules
-        - Other
+      label: What would you like to see?
+      description: Describe the idea or improvement.
+      placeholder: It would be useful if...
     validations:
       required: true
 
   - type: textarea
-    id: problem
-    attributes:
-      label: What would you like to improve?
-      description: Describe the problem, friction, or opportunity you noticed.
-      placeholder: It feels difficult to understand...
-    validations:
-      required: true
-
-  - type: textarea
-    id: suggestion
-    attributes:
-      label: What would you change?
-      description: Describe your idea. It doesn't need to be fully worked out.
-      placeholder: I think it would be better if...
-    validations:
-      required: false
-
-  - type: textarea
-    id: context
+    id: why
     attributes:
       label: Why would this help?
-      description: Tell us what prompted the suggestion or what experience it would improve.
-    validations:
-      required: false
-
-  - type: dropdown
-    id: device
-    attributes:
-      label: Where did you encounter this?
-      options:
-        - Desktop / laptop
-        - Phone
-        - Tablet
-        - Not device-specific
+      description: Optional context about the problem this would solve or the experience it would improve.
     validations:
       required: false
 
@@ -65,6 +26,6 @@ body:
     id: additional
     attributes:
       label: Anything else?
-      description: Screenshots, examples, or other context are welcome.
+      description: Examples, screenshots, or other context.
     validations:
       required: false
